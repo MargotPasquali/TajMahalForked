@@ -15,3 +15,7 @@ struct TajMahalApp: App {
         }
     }
 }
+
+#Preview() {
+    WelcomeView()
+}
