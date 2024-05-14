@@ -14,42 +14,90 @@ struct WelcomeView: View {
             Image("TajMahal")
             HStack {
                 VStack (alignment: .leading){
-                        Text("Restaurant Indien")
-                            .font(.title2)
-                        
-                        Text("Taj Mahal")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Text("Restaurant Indien")
+                        .font(.title2)
+                    
+                    Text("Taj Mahal")
+                        .font(.title)
                 }
+                Spacer()
+                Image("Grey Logo")
+                
             }
+            .padding(20.0)
             VStack (alignment: .leading) {
                 HStack {
+                    Image(systemName: "clock")
+                        .foregroundColor(.gray)
+                    
                     Text("Mardi")
-                    .font(.subheadline)
+                        .font(.subheadline)
+                    
+                    Spacer()
+                    
                     Text("11h30 - 14h30 . 18h30 - 22h00")
-                    .font(.subheadline)
+                        .font(.subheadline)
                 }
                 
                 HStack {
+                    Image(systemName: "takeoutbag.and.cup.and.straw")
+                        .foregroundColor(.gray)
+                    
                     Text("Type de service")
-                    .font(.subheadline)
+                        .font(.subheadline)
+                    
+                    Spacer()
+                    
                     Text("A emporter")
-                    .font(.subheadline)
+                        .font(.subheadline)
                 }
                 
-                Text("12 avenue de la Brique - 75010 Paris")
-                    .font(.subheadline)
-                Text("www.tajmahal.fr")
-                    .font(.subheadline)
-                Text("06 12 34 56 78")
-                    .font(.subheadline)
+                HStack {
+                    Image(systemName: "location")
+                        .foregroundColor(.gray)
+                    
+                    Text("12 avenue de la Brique - 75010 Paris")
+                        .font(.subheadline)
+                }
+                HStack {
+                    Image(systemName: "globe")
+                        .foregroundColor(.gray)
+                    
+                    Text("www.tajmahal.fr")
+                        .font(.subheadline)
+                }
+                HStack {
+                    Image(systemName: "phone")
+                        .foregroundColor(.gray)
+                    
+                    Text("06 12 34 56 78")
+                        .font(.subheadline)
+                }
+                
             }
+            .padding()
             
             Spacer()
-            NavigationLink {
-                MenuView()
-            } label : {
-                Text("Accéder au menu")
+            
+            HStack {
+                NavigationLink {
+                    MenuView()
+                } label : {
+                    Spacer()
+                    Text("Accéder au menu")
+                    Spacer()
+                }
+                .background(Color("CustomRed"))
+                .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/))
+                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                .buttonStyle(.bordered)
+                .padding(10.0)
+                .foregroundStyle(.white)
+            .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
             }
+                
+            
+
         }
     }
 }
