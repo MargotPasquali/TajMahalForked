@@ -16,9 +16,14 @@ struct WelcomeView: View {
                 VStack (alignment: .leading){
                     Text("Restaurant Indien")
                         .font(.title2)
+                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 12))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                     
                     Text("Taj Mahal")
                         .font(.title)
+                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 18))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
                 Spacer()
                 Image("Grey Logo")
@@ -63,7 +68,7 @@ struct WelcomeView: View {
                     Image(systemName: "globe")
                         .foregroundColor(.gray)
                     
-                    Text("www.tajmahal.fr")
+                    Text(verbatim:"www.tajmahal.fr")
                         .font(.subheadline)
                 }
                 HStack {
@@ -75,6 +80,7 @@ struct WelcomeView: View {
                 }
                 
             }
+            .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
             .padding()
             
             Spacer()
@@ -85,6 +91,8 @@ struct WelcomeView: View {
                 } label : {
                     Spacer()
                     Text("Accéder au menu")
+                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 16))
+                        .fontWeight(.heavy)
                     Spacer()
                 }
                 .background(Color("CustomRed"))
@@ -93,10 +101,10 @@ struct WelcomeView: View {
                 .buttonStyle(.bordered)
                 .padding(10.0)
                 .foregroundStyle(.white)
+                
             .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
             }
                 
-            
 
         }
     }
