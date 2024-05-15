@@ -23,3 +23,4 @@ struct Dish {
     var spiceLevel: SpiceLevel
     var imageName: String
 }
+

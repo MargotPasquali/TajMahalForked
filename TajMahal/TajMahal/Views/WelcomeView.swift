@@ -6,31 +6,33 @@
 //
 
 import SwiftUI
-
 // Page d'accueil
 struct WelcomeView: View {
     var body: some View {
         NavigationStack {
             Image("TajMahal")
             HStack {
-                VStack (alignment: .leading){
+                VStack (alignment: .leading, spacing: 4.0){
                     Text("Restaurant Indien")
-                        .font(.title2)
-                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 12))
+                    
+                        .font(Font.custom("Plus Jakarta Sans", size: 12))
                         .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
                         .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                     
+                    
                     Text("Taj Mahal")
-                        .font(.title)
-                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 18))
+                        .font(Font.custom("Plus Jakarta Sans", size: 18))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
                 Spacer()
                 Image("Grey Logo")
                 
             }
-            .padding(20.0)
-            VStack (alignment: .leading) {
+            .padding(10)
+            
+            .padding(10.0)
+            
+            VStack (alignment: .leading, spacing: 10.0) {
                 HStack {
                     Image(systemName: "clock")
                         .foregroundColor(.gray)
@@ -70,6 +72,7 @@ struct WelcomeView: View {
                     
                     Text(verbatim:"www.tajmahal.fr")
                         .font(.subheadline)
+                        .lineSpacing(30)
                 }
                 HStack {
                     Image(systemName: "phone")
@@ -82,6 +85,9 @@ struct WelcomeView: View {
             }
             .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
             .padding()
+            .font(Font.custom("Plus Jakarta Sans", size: 12))
+            .fontWeight(.medium)
+            
             
             Spacer()
             
@@ -91,8 +97,9 @@ struct WelcomeView: View {
                 } label : {
                     Spacer()
                     Text("Accéder au menu")
-                        .font(Font.custom("PlusJakartaSans-VariableFont_wght", size: 16))
+                        .font(Font.custom("Plus Jakarta Sans", size: 16))
                         .fontWeight(.heavy)
+                    
                     Spacer()
                 }
                 .background(Color("CustomRed"))
@@ -102,14 +109,18 @@ struct WelcomeView: View {
                 .padding(10.0)
                 .foregroundStyle(.white)
                 
-            .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
             }
-                
-
+            
+            
         }
     }
 }
 
+
 #Preview {
     WelcomeView()
 }
+
+
+

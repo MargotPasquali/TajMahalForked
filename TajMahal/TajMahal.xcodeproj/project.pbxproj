@@ -68,7 +68,7 @@
 				42E9DCBB2AF113D1007CE7D0 /* Views */,
 				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
 				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
-				AEED1DB92BF3B5EC00B98481 /* Fonts */,
+				AEED1DB92BF3B5EC00B98481 /* Font */,
 				42E9DCB32AF11138007CE7D0 /* Preview Content */,
 				428D2B502AFA851900BBA4F5 /* Model.swift */,
 				428D2B522AFA882700BBA4F5 /* ViewModel.swift */,
@@ -94,13 +94,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AEED1DB92BF3B5EC00B98481 /* Fonts */ = {
+		AEED1DB92BF3B5EC00B98481 /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				AEED1DB72BF3AF7400B98481 /* PlusJakartaSans-VariableFont_wght.ttf */,
 				AEED1DBA2BF3B75100B98481 /* PlusJakartaSans-Regular.ttf */,
 			);
-			path = Fonts;
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
