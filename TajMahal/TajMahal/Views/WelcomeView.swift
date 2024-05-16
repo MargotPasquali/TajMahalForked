@@ -11,6 +11,10 @@ struct WelcomeView: View {
     var body: some View {
         NavigationStack {
             Image("TajMahal")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 335, height: 423)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             HStack {
                 VStack (alignment: .leading, spacing: 4.0){
                     Text("Restaurant Indien")

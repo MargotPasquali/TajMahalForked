@@ -11,7 +11,7 @@ struct DishDetail: View {
     let viewModel: ViewModel = ViewModel()
     
     var body: some View {
-        Text("Nom du plat")
+        Text(viewModel.apetizerArray[0].name)
             .font(.title)
             .multilineTextAlignment(.leading)
         Image("Tikka Masala")
