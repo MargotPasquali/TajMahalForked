@@ -8,31 +8,27 @@
 import SwiftUI
 
 struct SpiceLevelView: View {
-    
-    var image: Image
-    
+    let spiceNumberTotal: Int = 3
+    var spiceLevel: SpiceLevel
     var body: some View {
         
-        image
         HStack {
-            Image("Piment rouge")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 12, height: 12)
-            Image("Piment rouge")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 12, height: 12)
-            Image("Piment gris")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 12, height: 12)
+            ForEach (0..<spiceLevel.rawValue) { _ in
+                Image("Piment rouge")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 12, height: 12)
+            }
+            ForEach (0..<spiceNumberTotal - spiceLevel.rawValue) { _ in
+                Image("Piment gris")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 12, height: 12)
+            }
         }
     }
 }
 
-
-
 #Preview {
-    SpiceLevelView(image: Image("Piment rouge"))
+    SpiceLevelView(spiceLevel: .light)
 }
