@@ -12,6 +12,7 @@ struct SpiceLevelView: View {
     var image: Image
     
     var body: some View {
+        
         image
         HStack {
             Image("Piment rouge")

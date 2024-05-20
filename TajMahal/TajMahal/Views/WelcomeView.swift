@@ -97,7 +97,7 @@ struct WelcomeView: View {
             
             HStack {
                 NavigationLink {
-                    MenuView()
+                    MenuView2()
                 } label : {
                     Spacer()
                     Text("Accéder au menu")
