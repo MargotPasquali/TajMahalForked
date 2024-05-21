@@ -11,9 +11,22 @@ struct DishDetail: View {
     var dish: Dish  // S'attend à un plat
 
     var body: some View {
+        
         VStack(alignment: .leading) {
+            
             HStack {
-                Spacer()
+                NavigationLink {
+                    MenuView()
+                        .navigationBarBackButtonHidden(true)
+                } label : {
+                    
+                    Image("Back button")
+                        .font(Font.custom("Plus Jakarta Sans", size: 16))
+                        .fontWeight(.heavy)
+                    
+                    
+                }
+                
                 Text(dish.name)
                     .font(Font.custom("Plus Jakarta Sans", size: 18))
                     .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
@@ -21,13 +34,25 @@ struct DishDetail: View {
                 Spacer()
                 Spacer()
             }
+            .padding(10.0)
             HStack {
                 Spacer()
-                Image(dish.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 335, height: 467)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                ZStack(alignment: .topTrailing) {
+                    Image(dish.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 335, height: 467)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    Rectangle()
+                        .foregroundColor(Color.white)  // Assurez-vous que cette couleur correspond à l'arrière-plan de votre liste
+                        .frame(width: 74, height: 22)
+                        .cornerRadius(11)  // Coins arrondis
+                        .padding(10)
+                    
+                    SpiceLevelView(spiceLevel: dish.spiceLevel)
+                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 20))
+                }
                 Spacer()
             }
             VStack(alignment: .leading, spacing: 6.0) {
@@ -53,5 +78,5 @@ struct DishDetail: View {
     }
 }
 #Preview {
-    DishDetail(dish: ViewModel().mainCourseArray[0])
+    DishDetail(dish: ViewModel().apetizerArray[0])
 }
