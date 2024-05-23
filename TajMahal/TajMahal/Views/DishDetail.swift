@@ -78,5 +78,5 @@ struct DishDetail: View {
     }
 }
 #Preview {
-    DishDetail(dish: ViewModel().apetizerArray[0])
+    DishDetail(dish: ViewModel().mainCourseArray[0])
 }

@@ -12,7 +12,6 @@ struct MenuListRow: View {
     var dish: Dish
     
     var body: some View {
-        Section {
             ZStack {
                 HStack {
                     Spacer()
@@ -50,16 +49,14 @@ struct MenuListRow: View {
                     
                 }
             }
-        }
+        
         }}
 
-struct MenuListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            MenuListRow(dish: ViewModel().apetizerArray[0])  // Afficher le premier plat pour la prévisualisation
-            MenuListRow(dish: ViewModel().apetizerArray[1])  // Afficher le deuxième plat pour la prévisualisation
 
-        }
-        .padding()  // Ajoute un peu d'espacement autour des éléments pour une meilleure visibilité
+#Preview {
+    List {
+        MenuListRow(dish: ViewModel().apetizerArray[0])
+        MenuListRow(dish: ViewModel().apetizerArray[1])
     }
+    
 }

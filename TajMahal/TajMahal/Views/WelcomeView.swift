@@ -10,7 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
         NavigationStack {
-            Image("TajMahal")
+            Image("Photo Taj Mahal")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 335, height: 423)
@@ -98,7 +98,6 @@ struct WelcomeView: View {
             HStack {
                 NavigationLink {
                     MenuView()
-                        .navigationBarBackButtonHidden(true)
                 } label : {
                     Spacer()
                     Text("Accéder au menu")

@@ -11,37 +11,8 @@ struct MenuView: View {
     let viewModel: ViewModel = ViewModel()
     
     var body: some View {
-        NavigationSplitView {
             
             List {
-                ZStack(alignment: .center) {
-                    
-                    HStack {
-                        Spacer()
-                        
-                        Text("Menu")
-                            .font(Font.custom("Plus Jakarta Sans", size: 18))
-                            .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                        
-                    }
-                    
-                    NavigationLink {
-                        WelcomeView()
-                            .navigationBarBackButtonHidden(true)
-                    } label : {
-                        Image("Back button")
-                    }
-                    Rectangle() // Pour masquer le chevron
-                        .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.967))  // Assurez-vous que cette couleur correspond à l'arrière-plan de votre liste
-                        .frame(width: 11, height: 38)
-                        .offset(x: 170)  // // Ajustez cet offset pour bien couvrir le chevron
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets())
-                
                 Section(header: Text("Entrées")
                     .font(Font.custom("Plus Jakarta Sans", size: 14))
                     .fontWeight(.semibold)
@@ -125,21 +96,16 @@ struct MenuView: View {
                 
                 
                 
-            }
+            }.navigationTitle("Menu")
+                .navigationBarTitleDisplayMode(.inline)
             
             
-        } detail: {
-            // Détail de vue ici si nécessaire
-            
-        }
     }
 }
 
 
-// Preview
-struct MenuView2_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
+
+#Preview {
+    MenuView()
 }
 
