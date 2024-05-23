@@ -10,56 +10,51 @@ import SwiftUI
 struct MenuListRow: View {
     let viewModel: ViewModel = ViewModel()
     var dish: Dish
-    
+
     var body: some View {
-        Section {
-            ZStack {
-                HStack {
-                    Spacer()
-                    Image(dish.imageName)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 112, height: 86)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    
-                    VStack (alignment: .leading, spacing: 10.0) {
-                        
-                        Text(dish.name)
-                            .font(Font.custom("Plus Jakarta Sans", size: 14))
-                            .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
-                        
-                        
-                        Text(dish.description)
-                            .font(Font.custom("Plus Jakarta Sans", size: 12))
-                            .fontWeight(/*@START_MENU_TOKEN@*/.regular/*@END_MENU_TOKEN@*/)
-                            .lineLimit(2)
-                        HStack {
-                            Text(dish.price)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
-                            Spacer()
-                            
-                            SpiceLevelView(spiceLevel: dish.spiceLevel)
-                            
-                        }
+        ZStack {
+            Rectangle()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .foregroundStyle(.white)
+                .clipShape(.rect(cornerRadius: 8))
+
+            HStack {
+                Spacer()
+
+                Image(dish.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 112, height: 86)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+
+                VStack (alignment: .leading, spacing: 10.0) {
+
+                    Text(dish.name)
+                        .font(Font.custom("Plus Jakarta Sans", size: 14))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
+
+
+                    Text(dish.description)
                         .font(Font.custom("Plus Jakarta Sans", size: 12))
-                        
-                        
+                        .fontWeight(/*@START_MENU_TOKEN@*/.regular/*@END_MENU_TOKEN@*/)
+                        .lineLimit(2)
+                    HStack {
+                        Text(dish.price)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
+                        Spacer()
+
+                        SpiceLevelView(spiceLevel: dish.spiceLevel)
+
                     }
-                    .padding(10.0)
-                    .foregroundColor(Color(hue: 0.0, saturation: 0.171, brightness: 0.436))
-                    
+                    .font(Font.custom("Plus Jakarta Sans", size: 12))
                 }
+                .padding(10.0)
+                .foregroundColor(Color(hue: 0.0, saturation: 0.171, brightness: 0.436))
             }
         }
-        }}
-
-struct MenuListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            MenuListRow(dish: ViewModel().apetizerArray[0])  // Afficher le premier plat pour la prévisualisation
-            MenuListRow(dish: ViewModel().apetizerArray[1])  // Afficher le deuxième plat pour la prévisualisation
-
-        }
-        .padding()  // Ajoute un peu d'espacement autour des éléments pour une meilleure visibilité
     }
+}
+
+#Preview {
+    MenuListRow(dish: ViewModel().apetizerArray[0])
 }

@@ -98,7 +98,6 @@ struct WelcomeView: View {
             HStack {
                 NavigationLink {
                     MenuView()
-                        .navigationBarBackButtonHidden(true)
                 } label : {
                     Spacer()
                     Text("Accéder au menu")
