@@ -13,27 +13,14 @@ struct DishDetail: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-            
-            HStack {
-                NavigationLink {
-                    MenuView()
-                        .navigationBarBackButtonHidden(true)
-                } label : {
-                    
-                    Image("Back button")
-                        .font(Font.custom("Plus Jakarta Sans", size: 16))
-                        .fontWeight(.heavy)
-                    
-                    
-                }
+
                 
                 Text(dish.name)
                     .font(Font.custom("Plus Jakarta Sans", size: 18))
                     .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
                 .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                Spacer()
-                Spacer()
-            }
+                
+            
             .padding(10.0)
             HStack {
                 Spacer()
