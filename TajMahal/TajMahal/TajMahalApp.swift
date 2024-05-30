@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TajMahalApp: App {
-    
+
     
     var body: some Scene {
         WindowGroup {

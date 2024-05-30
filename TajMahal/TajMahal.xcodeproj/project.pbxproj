@@ -16,6 +16,7 @@
 		AE2F2E8D2BF7932600626CEF /* MenuListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F2E8C2BF7932600626CEF /* MenuListRow.swift */; };
 		AE2F2E912BF7992E00626CEF /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F2E902BF7992E00626CEF /* MenuView.swift */; };
 		AE80642D2BF244B000F8A83E /* DishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80642C2BF244B000F8A83E /* DishDetail.swift */; };
+		AEB933F52C08CC7200C8E27B /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB933F42C08CC7200C8E27B /* NumberFormatter.swift */; };
 		AEDBAD6D2BF632AB00EC4D3E /* SpiceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDBAD6C2BF632AB00EC4D3E /* SpiceLevelView.swift */; };
 		AEED1DB82BF3AF7400B98481 /* PlusJakartaSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEED1DB72BF3AF7400B98481 /* PlusJakartaSans-VariableFont_wght.ttf */; };
 		AEED1DBB2BF3B75100B98481 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEED1DBA2BF3B75100B98481 /* PlusJakartaSans-Regular.ttf */; };
@@ -33,6 +34,7 @@
 		AE2F2E8C2BF7932600626CEF /* MenuListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListRow.swift; sourceTree = "<group>"; };
 		AE2F2E902BF7992E00626CEF /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AE80642C2BF244B000F8A83E /* DishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetail.swift; sourceTree = "<group>"; };
+		AEB933F42C08CC7200C8E27B /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		AEDBAD6C2BF632AB00EC4D3E /* SpiceLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceLevelView.swift; sourceTree = "<group>"; };
 		AEED1DB72BF3AF7400B98481 /* PlusJakartaSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		AEED1DBA2BF3B75100B98481 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -68,14 +70,15 @@
 		42E9DCAC2AF11136007CE7D0 /* TajMahal */ = {
 			isa = PBXGroup;
 			children = (
-				42E9DCC02AF11662007CE7D0 /* Info.plist */,
-				42E9DCBB2AF113D1007CE7D0 /* Views */,
-				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
 				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
 				AEED1DB92BF3B5EC00B98481 /* Font */,
-				42E9DCB32AF11138007CE7D0 /* Preview Content */,
+				42E9DCC02AF11662007CE7D0 /* Info.plist */,
 				428D2B502AFA851900BBA4F5 /* Model.swift */,
+				AEB933F42C08CC7200C8E27B /* NumberFormatter.swift */,
+				42E9DCB32AF11138007CE7D0 /* Preview Content */,
+				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
 				428D2B522AFA882700BBA4F5 /* ViewModel.swift */,
+				42E9DCBB2AF113D1007CE7D0 /* Views */,
 			);
 			path = TajMahal;
 			sourceTree = "<group>";
@@ -92,10 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				AEDBAD6B2BF6324F00EC4D3E /* Elements Views */,
-				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
-				AE2F2E902BF7992E00626CEF /* MenuView.swift */,
-				AE2F2E8C2BF7932600626CEF /* MenuListRow.swift */,
 				AE80642C2BF244B000F8A83E /* DishDetail.swift */,
+				AE2F2E8C2BF7932600626CEF /* MenuListRow.swift */,
+				AE2F2E902BF7992E00626CEF /* MenuView.swift */,
+				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				AE80642D2BF244B000F8A83E /* DishDetail.swift in Sources */,
 				AEDBAD6D2BF632AB00EC4D3E /* SpiceLevelView.swift in Sources */,
 				42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */,
+				AEB933F52C08CC7200C8E27B /* NumberFormatter.swift in Sources */,
 				428D2B512AFA851900BBA4F5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

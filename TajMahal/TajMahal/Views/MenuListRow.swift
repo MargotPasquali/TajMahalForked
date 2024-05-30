@@ -14,7 +14,7 @@ struct MenuListRow: View {
     var body: some View {
             ZStack {
                 HStack {
-                    Spacer()
+                    
                     Image(dish.imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -24,22 +24,32 @@ struct MenuListRow: View {
                     VStack (alignment: .leading, spacing: 10.0) {
                         
                         Text(dish.name)
-                            .font(Font.custom("Plus Jakarta Sans", size: 14))
+                            .font(Font.custom("Plus Jakarta Sans", size: 14, relativeTo: .headline))
                             .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
                         
                         
                         Text(dish.description)
-                            .font(Font.custom("Plus Jakarta Sans", size: 12))
+                            .font(Font.custom("Plus Jakarta Sans", size: 12, relativeTo: .callout))
                             .fontWeight(/*@START_MENU_TOKEN@*/.regular/*@END_MENU_TOKEN@*/)
                             .lineLimit(2)
                         HStack {
-                            Text(dish.price)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
+                            
+                            if let formattedAmount = NumberFormatter.currencyEUR.string(from: NSNumber(value: dish.price)) {
+                                Text(formattedAmount)
+                                    .font(Font.custom("Plus Jakarta Sans", size: 12, relativeTo: .callout))
+                                    .fontWeight(.medium)
+                            } else {
+                                Text("Invalid amount")
+                                    .font(Font.custom("Plus Jakarta Sans", size: 12, relativeTo: .callout))
+                                    .fontWeight(.medium)
+                            }
+                            
+                            
                             Spacer()
                             
                             SpiceLevelView(spiceLevel: dish.spiceLevel)
-                            
                         }
+                    }.padding(2)
                         .font(Font.custom("Plus Jakarta Sans", size: 12))
                         
                         
@@ -50,7 +60,7 @@ struct MenuListRow: View {
                 }
             }
         
-        }}
+        }
 
 
 #Preview {

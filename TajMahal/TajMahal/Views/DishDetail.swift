@@ -24,7 +24,7 @@ struct DishDetail: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     Rectangle()
-                        .foregroundColor(Color.white)  // Assurez-vous que cette couleur correspond à l'arrière-plan de votre liste
+                        .foregroundColor(Color.white)
                         .frame(width: 74, height: 22)
                         .cornerRadius(11)  // Coins arrondis
                         .padding(10)
@@ -53,7 +53,7 @@ struct DishDetail: View {
             }
         }.navigationTitle(dish.name)
             .padding()
-            .font(Font.custom("Plus Jakarta Sans", size: 12))
+            .font(Font.custom("Plus Jakarta Sans", size: 13, relativeTo: .body))
             .foregroundColor(Color(hue: 0.0, saturation: 0.171, brightness: 0.436))
             
     }

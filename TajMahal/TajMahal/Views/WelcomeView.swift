@@ -18,20 +18,17 @@ struct WelcomeView: View {
             HStack {
                 VStack (alignment: .leading, spacing: 4.0){
                     Text("Restaurant Indien")
-                        .font(.caption)
-                        .font(Font.custom("Plus Jakarta Sans", size: 12))
+                        .font(Font.custom("Plus Jakarta Sans", size: 13, relativeTo: .caption))
                         .fontWeight(.light)
                         .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                     
                     
                     Text("Taj Mahal")
-                        .font(.title)
-                    
-                        .font(Font.custom("Plus Jakarta Sans", size: 18))
+                        .font(Font.custom("Plus Jakarta Sans", size: 21, relativeTo: .title3))
                         .fontWeight(.bold)
                 }
                 Spacer()
-                Image("Grey Logo")
+                Image("Gray Logo")
                 
             }
             .padding(10)
@@ -44,12 +41,10 @@ struct WelcomeView: View {
                         .foregroundColor(.gray)
                     
                     Text("Mardi")
-                        .font(.subheadline)
                     
                     Spacer()
                     
                     Text("11h30 - 14h30 . 18h30 - 22h00")
-                        .font(.subheadline)
                 }
                 
                 HStack {
@@ -57,12 +52,10 @@ struct WelcomeView: View {
                         .foregroundColor(.gray)
                     
                     Text("Type de service")
-                        .font(.subheadline)
                     
                     Spacer()
                     
                     Text("A emporter")
-                        .font(.subheadline)
                 }
                 
                 HStack {
@@ -70,14 +63,12 @@ struct WelcomeView: View {
                         .foregroundColor(.gray)
                     
                     Text("12 avenue de la Brique - 75010 Paris")
-                        .font(.subheadline)
                 }
                 HStack {
                     Image(systemName: "globe")
                         .foregroundColor(.gray)
                     
                     Text(verbatim:"www.tajmahal.fr")
-                        .font(.subheadline)
                         .lineSpacing(30)
                 }
                 HStack {
@@ -85,13 +76,12 @@ struct WelcomeView: View {
                         .foregroundColor(.gray)
                     
                     Text("06 12 34 56 78")
-                        .font(.subheadline)
                 }
                 
             }
             .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
             .padding()
-            .font(Font.custom("Plus Jakarta Sans", size: 12))
+            .font(Font.custom("Plus Jakarta Sans", size: 13, relativeTo: .subheadline))
             .fontWeight(.medium)
             
             
@@ -103,7 +93,7 @@ struct WelcomeView: View {
                 } label : {
                     Spacer()
                     Text("Accéder au menu")
-                        .font(Font.custom("Plus Jakarta Sans", size: 16))
+                        .font(Font.custom("Plus Jakarta Sans", size: 18))
                         .fontWeight(.heavy)
                     
                     Spacer()
