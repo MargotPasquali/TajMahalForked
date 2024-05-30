@@ -30,7 +30,7 @@ struct MenuView: View {
             ForEach(dishArray, id: \.name) { dish in
                 ZStack {
                     Rectangle() // Grand Rectangle Radius
-                        .foregroundColor(Color.white)  // Assurez-vous que cette couleur correspond à l'arrière-plan de votre liste
+                        .foregroundColor(Color.white)
                         .frame(width: 335, height: 110)
                         .cornerRadius(10)  // Coins arrondis
                     
@@ -45,7 +45,7 @@ struct MenuView: View {
                     
                     
                     Rectangle() // Pour masquer le chevron
-                        .foregroundColor(Color.white)  // Assurez-vous que cette couleur correspond à l'arrière-plan de votre liste
+                        .foregroundColor(Color.white)
                         .frame(width: 11, height: 38)
                         .offset(x: 162)  // // Ajustez cet offset pour bien couvrir le chevron
                     

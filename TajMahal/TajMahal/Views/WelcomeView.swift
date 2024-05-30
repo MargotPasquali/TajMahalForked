@@ -18,15 +18,17 @@ struct WelcomeView: View {
             HStack {
                 VStack (alignment: .leading, spacing: 4.0){
                     Text("Restaurant Indien")
-                    
+                        .font(.caption)
                         .font(Font.custom("Plus Jakarta Sans", size: 12))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.light)
                         .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                     
                     
                     Text("Taj Mahal")
+                        .font(.title)
+                    
                         .font(Font.custom("Plus Jakarta Sans", size: 18))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                 }
                 Spacer()
                 Image("Grey Logo")
@@ -107,13 +109,13 @@ struct WelcomeView: View {
                     Spacer()
                 }
                 .background(Color("CustomRed"))
-                .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/))
-                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                .padding(EdgeInsets())
                 .buttonStyle(.bordered)
                 .padding(10.0)
                 .foregroundStyle(.white)
                 
-                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                .padding(EdgeInsets())
             }
             
             

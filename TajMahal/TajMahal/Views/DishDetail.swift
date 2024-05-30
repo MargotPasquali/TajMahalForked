@@ -13,15 +13,7 @@ struct DishDetail: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-
-                
-                Text(dish.name)
-                    .font(Font.custom("Plus Jakarta Sans", size: 18))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
-                .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                
             
-            .padding(10.0)
             HStack {
                 Spacer()
                 ZStack(alignment: .topTrailing) {
@@ -42,6 +34,7 @@ struct DishDetail: View {
                 }
                 Spacer()
             }
+            
             VStack(alignment: .leading, spacing: 6.0) {
                 Spacer()
                 Spacer()
@@ -58,7 +51,8 @@ struct DishDetail: View {
                 Spacer()
                 Spacer()
             }
-        }.padding()
+        }.navigationTitle(dish.name)
+            .padding()
             .font(Font.custom("Plus Jakarta Sans", size: 12))
             .foregroundColor(Color(hue: 0.0, saturation: 0.171, brightness: 0.436))
             
